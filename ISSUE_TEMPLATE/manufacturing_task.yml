@@ -1,0 +1,41 @@
+name: Manufacturing Task
+description: Use this template to create a new manufacturing task.
+title: "[MFG]: "
+type: Manufacturing
+body:
+- type: input
+  id: part_name
+  attributes:
+    label: Part Name
+  validations:
+    required: true
+- type: input
+  id: quantity
+  attributes:
+    label: Quantity
+    value: "1"
+  validations:
+    required: true
+- type: input
+  id: part_link
+  attributes:
+    label: OnShape Link
+- type: dropdown
+  id: method
+  attributes:
+    label: Manufacturing Method
+    options:
+      - Unknown
+      - 3D Printer
+      - CNC Router
+      - CNC Mill
+      - Manual Mill
+      - Lathe
+      - Manual Process
+    default: 0
+- type: textarea
+  id: notes
+  attributes:
+    label: Notes
+    placeholder: |
+      Please provide any additional information about the manufacturing task here.
