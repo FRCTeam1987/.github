@@ -4,12 +4,6 @@ title: "[MFG]: "
 type: Manufacturing
 body:
 - type: input
-  id: part_name
-  attributes:
-    label: Part Name
-  validations:
-    required: true
-- type: input
   id: quantity
   attributes:
     label: Quantity
