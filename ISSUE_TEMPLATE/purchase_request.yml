@@ -133,5 +133,7 @@ body:
     options:
       - label: I have searched for the item and have verified that it is not already available.
         required: true
+      - label: I have checked the purchase project and could not find an already open purchase request.
+        required: true
       - label: I have filled out this form to the best of my ability and seeked help if process was not clear.
         required: true
