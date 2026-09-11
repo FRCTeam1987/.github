@@ -1,5 +1,5 @@
 name: Manufacturing Task
-description: Use this template to create a new manufacturing task.
+description: Request parts to be manufactured.
 type: Manufacturing
 body:
 - type: input
