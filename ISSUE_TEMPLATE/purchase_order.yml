@@ -39,16 +39,19 @@ body:
   attributes:
     label: Tax
     description: Tax amount for the order.
+    placeholder: $ (USD)
 - type: input
   id: shipping
   attributes:
     label: Shipping
     description: Shipping amount for the order.
+    placeholder: $ (USD)
 - type: input
   id: total
   attributes:
     label: Grand Total
     description: Total amount for the order.
+    placeholder: $ (USD)
 - type: dropdown
   id: purchasing-account
   attributes:
@@ -63,25 +66,28 @@ body:
   attributes:
     label: Date Ordered
     description: The date the order was placed.
+    placeholder: YYYY-MM-DD
 - type: input
   id: date-expected
   attributes:
     label: Date Expected
     description: The date the order is expected to arrive.
+    placeholder: YYYY-MM-DD
 - type: input
   id: date-received
   attributes:
     label: Date Received
     description: The date the order was received.
-- type: textarea
-  id: requests
-  attributes:
-    label: Purchase Requests
-    description: List of the purchase requests that are being ordered together.
-    placeholder: Please link purchase requests as sub-issues.
+    placeholder: YYYY-MM-DD
 - type: textarea
   id: notes
   attributes:
     label: Notes
     placeholder: |
       Please provide any additional information about the purchase order here.
+- type: textarea
+  id: requests
+  attributes:
+    label: Purchase Requests
+    description: List of the purchase requests that are being ordered together.
+    placeholder: Please link purchase requests as sub-issues.
