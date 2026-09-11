@@ -10,11 +10,12 @@ body:
   id: part-number
   attributes:
     label: Part Number
+    description: If applicable
 - type: input
   id: number-of-units
   attributes:
     label: Number of Units
-    description: If parts are grouped, how many groups.
+    description: If parts are grouped, provide the number of groups.
     value: "1"
   validations:
     required: true
@@ -23,6 +24,7 @@ body:
   attributes:
     label: Price Per Unit
     description: Price before tax and shipping.
+    placeholder: $ (USD)
   validations:
     required: true
 - type: input
@@ -65,6 +67,8 @@ body:
       - VEX Robotics
       - West Coast Products
       - Other
+  validations:
+    required: true
 - type: dropdown
   id: category
   attributes:
@@ -77,6 +81,8 @@ body:
       - Technology
       - Tools
       - Other
+  validations:
+    required: true
 - type: dropdown
   id: cost-center
   attributes:
@@ -97,14 +103,35 @@ body:
       - Team Events
       - Public Events
       - Unknown
+  validations:
+    required: true
 - type: input
   id: cost-subcenter
   attributes:
     label: Cost Division
     description: For granular tracking of costs, specify a division. For example, if the cost center is "Current Robot", the division could be "Drive Train" or "Intake".
 - type: textarea
+  id: purchase-reason
+  attributes:
+    label: Reason for Purchase
+    placeholder: |
+      Please the reason for this purchase.
+  validations:
+    required: true
+- type: textarea
   id: notes
   attributes:
     label: Notes
     placeholder: |
       Please provide any additional information about the purchase request here.
+- type: checkboxes
+  id: attestation
+  attributes:
+    label: Attestation
+    description: |
+      Check the boxes below to confirm that you have completed the necessary steps to submit this purchase request.
+    options:
+      - label: I have searched for the item and have verified that it is not already available.
+        required: true
+      - label: I have filled out this form to the best of my ability and seeked help if process was not clear.
+        required: true
