@@ -1,0 +1,87 @@
+name: Purchase Order
+description: An set of purchase requests that are being ordered together.
+title: "Order: "
+labels: purchasing
+type: Purchase Order
+projects:
+  - FRCTeam1987/7
+body:
+- type: dropdown
+  id: vendor
+  attributes:
+    description:
+      If the vendor is not listed, select "Other" and provide the vendor name in the notes section.
+    label: Vendor
+    options:
+      - Ace Hardware
+      - Amazon
+      - AndyMark
+      - Automation Direct
+      - Bambu Lab
+      - Cross the Road Electronics
+      - Digikey
+      - Fastinal
+      - Home Depot
+      - Lowes
+      - Manufacturing Solutions of MN Inc.
+      - McMaster-Carr
+      - Metal By The Foot
+      - Microcenter
+      - Polymaker
+      - REV Robotics
+      - Swyft Robotics
+      - The Thifty Bot
+      - VEX Robotics
+      - West Coast Products
+      - Other
+- type: input
+  id: tax
+  attributes:
+    label: Tax
+    description: Tax amount for the order.
+- type: input
+  id: shipping
+  attributes:
+    label: Shipping
+    description: Shipping amount for the order.
+- type: input
+  id: total
+  attributes:
+    label: Grand Total
+    description: Total amount for the order.
+- type: dropdown
+  id: purchasing-account
+  attributes:
+    label: Purchasing Account
+    options:
+      - LS RED
+      - LS Educational
+      - Activity Fund
+      - Petty Cash
+- type: input
+  id: date-ordered
+  attributes:
+    label: Date Ordered
+    description: The date the order was placed.
+- type: input
+  id: date-expected
+  attributes:
+    label: Date Expected
+    description: The date the order is expected to arrive.
+- type: input
+  id: date-received
+  attributes:
+    label: Date Received
+    description: The date the order was received.
+- type: textarea
+  id: requests
+  attributes:
+    label: Purchase Requests
+    description: List of the purchase requests that are being ordered together.
+    placeholder: Please link purchase requests as sub-issues.
+- type: textarea
+  id: notes
+  attributes:
+    label: Notes
+    placeholder: |
+      Please provide any additional information about the purchase order here.
