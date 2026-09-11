@@ -1,0 +1,110 @@
+name: Purchase Request
+description: A request to purchase parts or materials.
+title: "Request: "
+labels: purchasing
+type: Purchase Request
+projects:
+  - FRCTeam1987/7
+body:
+- type: input
+  id: part-number
+  attributes:
+    label: Part Number
+- type: input
+  id: number-of-units
+  attributes:
+    label: Number of Units
+    description: If parts are grouped, how many groups.
+    value: "1"
+  validations:
+    required: true
+- type: input
+  id: price-per-unit
+  attributes:
+    label: Price Per Unit
+    description: Price before tax and shipping.
+  validations:
+    required: true
+- type: input
+  id: quantity-per-unit
+  attributes:
+    label: Quantity per Unit
+    description: If parts are grouped, how many parts are in each group.
+    value: "1"
+  validations:
+    required: true
+- type: input
+  id: product-url
+  attributes:
+    label: Product Url
+- type: dropdown
+  id: vendor
+  attributes:
+    description:
+      If the vendor is not listed, select "Other" and provide the vendor name in the notes section.
+    label: Vendor
+    options:
+      - Ace Hardware
+      - Amazon
+      - AndyMark
+      - Automation Direct
+      - Bambu Lab
+      - Cross the Road Electronics
+      - Digikey
+      - Fastinal
+      - Home Depot
+      - Lowes
+      - Manufacturing Solutions of MN Inc.
+      - McMaster-Carr
+      - Metal By The Foot
+      - Microcenter
+      - Polymaker
+      - REV Robotics
+      - Swyft Robotics
+      - The Thifty Bot
+      - VEX Robotics
+      - West Coast Products
+      - Other
+- type: dropdown
+  id: category
+  attributes:
+    label: Category
+    options:
+      - Digital Product
+      - Food
+      - Raw Materials
+      - Supplies / Parts
+      - Technology
+      - Tools
+      - Other
+- type: dropdown
+  id: cost-center
+  attributes:
+    label: Cost Center
+    description: What will be using the item being purchased.
+    multiple: true
+    options:
+      - Offseason Robot
+      - Current Robot
+      - Future Robot(s)
+      - Kitchen
+      - Office
+      - Manufacturing Dept
+      - Design Dept
+      - Competition
+      - Summer Camps
+      - Fundraising Activities
+      - Team Events
+      - Public Events
+      - Unknown
+- type: input
+  id: cost-subcenter
+  attributes:
+    label: Cost Division
+    description: For granular tracking of costs, specify a division. For example, if the cost center is "Current Robot", the division could be "Drive Train" or "Intake".
+- type: textarea
+  id: notes
+  attributes:
+    label: Notes
+    placeholder: |
+      Please provide any additional information about the purchase request here.
