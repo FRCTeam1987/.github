@@ -10,9 +10,13 @@ body:
   validations:
     required: true
 - type: input
-  id: part_link
+  id: cad-link
   attributes:
-    label: OnShape Link
+    label: CAD Link
+- type: input
+  id: version
+  attributes:
+    label: Version
 - type: dropdown
   id: method
   attributes:
@@ -32,3 +36,8 @@ body:
     label: Notes
     placeholder: |
       Please provide any additional information about the manufacturing task here.
+- type: upload
+  id: uploades
+  attributes:
+    label: Upload relevant files
+    description: "Drag and drop any relevant files."
