@@ -1,0 +1,34 @@
+name: Design Task
+description: Plan components that need to be designed.
+type: Design
+body:
+- type: input
+  id: cad-link
+  attributes:
+    label: CAD Link
+- type: input
+  id: version
+  attributes:
+    label: Version
+    value: "1"
+- type: input
+  id: subsystem
+  attributes:
+    label: Subsystem
+- type: textarea
+  id: design-brief
+  attributes:
+    label: Design Brief
+- type: textarea
+  id: notes
+  attributes:
+    label: Notes
+- type: input
+  id: release-link
+  attributes:
+    label: Release Link
+- type: upload
+  id: uploades
+  attributes:
+    label: Upload relevant files
+    description: "Drag and drop any relevant files."
