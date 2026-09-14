@@ -1,0 +1,43 @@
+name: Manufacturing Task
+description: Request parts to be manufactured.
+type: Manufacturing
+body:
+- type: input
+  id: quantity
+  attributes:
+    label: Quantity
+    value: "1"
+  validations:
+    required: true
+- type: input
+  id: cad-link
+  attributes:
+    label: CAD Link
+- type: input
+  id: version
+  attributes:
+    label: Release Version
+- type: dropdown
+  id: method
+  attributes:
+    label: Manufacturing Method
+    options:
+      - Unknown
+      - 3D Printer
+      - CNC Router
+      - CNC Mill
+      - Manual Mill
+      - Lathe
+      - Manual Process
+    default: 0
+- type: textarea
+  id: notes
+  attributes:
+    label: Notes
+    placeholder: |
+      Please provide any additional information about the manufacturing task here.
+- type: upload
+  id: uploades
+  attributes:
+    label: Upload relevant files
+    description: "Drag and drop any relevant files."
