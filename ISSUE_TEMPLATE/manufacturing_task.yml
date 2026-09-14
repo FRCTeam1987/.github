@@ -1,6 +1,7 @@
 name: Manufacturing Task
 description: Request parts to be manufactured.
 type: Manufacturing
+projects: ["FRCTeam1987/8"]
 body:
 - type: input
   id: quantity
