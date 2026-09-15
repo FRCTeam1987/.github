@@ -1,0 +1,24 @@
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  manufacturing_label:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.issue_type.name, 'Manufacturing')
+
+    steps:
+      - name: Parse Issue
+        id: parse_mfg_issue
+        uses: issue-ops/parser@v2.0.0
+        with:
+          body: ${{ github.event.issue.body }}
+          issue-form-template: .github/ISSUE_TEMPLATE/manufacturing_task.yml
+
+      - name: Label
+        id: label_mfg_method
+        uses: issue-ops/labeler@v2.0.0
+        with:
+          action: add
+          labels: ${{ steps.parse_mfg_issue.outputs.method }}
