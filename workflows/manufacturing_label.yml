@@ -6,7 +6,7 @@ on:
 jobs:
   manufacturing_label:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.issue_type.name, 'Manufacturing')
+    if: contains(github.event.issue.type, 'Manufacturing')
 
     steps:
       - name: Parse Issue
