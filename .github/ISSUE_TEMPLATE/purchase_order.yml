@@ -35,6 +35,12 @@ body:
       - West Coast Products
       - Other
 - type: input
+  id: subtotal
+  attributes:
+    label: Subtotal
+    description: Total of all the individual purchase requests.
+    placeholder: $ (USD)
+- type: input
   id: tax
   attributes:
     label: Tax
@@ -45,12 +51,6 @@ body:
   attributes:
     label: Shipping
     description: Shipping amount for the order.
-    placeholder: $ (USD)
-- type: input
-  id: total
-  attributes:
-    label: Grand Total
-    description: Total amount for the order.
     placeholder: $ (USD)
 - type: dropdown
   id: purchasing-account
@@ -72,12 +72,6 @@ body:
   attributes:
     label: Date Expected
     description: The date the order is expected to arrive.
-    placeholder: YYYY-MM-DD
-- type: input
-  id: date-received
-  attributes:
-    label: Date Received
-    description: The date the order was received.
     placeholder: YYYY-MM-DD
 - type: textarea
   id: notes
